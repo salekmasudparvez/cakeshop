@@ -4,35 +4,70 @@ function changeContent(page) {
     
     // Simulating content change for demonstration purposes
     if (page === 'home') {
-        contentDiv.innerHTML = `<h2>Welcome to the Cake Shop</h2>`;
+        contentDiv.innerHTML = `<div><h2 class="text-white d-flex justify-content-center aling-item- center align-items-center">Welcome to the Cake Shop</h2>
+        <figure class="m-3">
+        <blockquote class="blockquote">
+          <p>"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."</p>
+        </blockquote>
+        <figcaption class="blockquote-footer text-light">
+        Martin Fowler
+        </figcaption>
+      </figure>
+      </div>
+       `
     } else if (page === 'menu') {
-        contentDiv.innerHTML = `<div class="card" style="width: 18rem;">
-        <img src="./images/birthday-cake-birthday-svgrepo-com.svg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Cake</h5>
-          <p class="card-text">Testy and delicious cake.</p>
-          <a href="#" class="btn btn-primary">Buy</a>
+        contentDiv.innerHTML = `<div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0 " >
+       
+          <div class="card">
+          <img  src="./images/birthday-cake-birthday-svgrepo-com.svg" class="img" >
+            <div class="card-body">
+              <h5 class="card-title">Birthday Cake-1</h5>
+              <p class="card-text">Cake is a delightful and indulgent dessert that comes in various flavors, textures, and styles.</p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+          <img  src="./images/birthday-cake-cake-svgrepo-com.svg" class="img" >
+            <div class="card-body">
+              <h5 class="card-title">Birthday Cake-2</h5>
+              <p class="card-text">Cake is a delightful and indulgent dessert that comes in various flavors, textures, and styles.</p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./images/birthday-cake-birthday-svgrepo-com.svg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Cake</h5>
-          <p class="card-text">Testy and delicious cake.</p>
-          <a href="#" class="btn btn-primary">Buy</a>
-        </div>
+      <div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+    <img  src="./images/birthday-cake-svgrepo-com.svg" class="img">
+      <div class="card-body">
+        <h5 class="card-title">Birthday Cake-3</h5>
+        <p class="card-text">Cake is a delightful and indulgent dessert that comes in various flavors, textures, and styles.</p>
+        <a href="#" class="btn btn-primary">Buy</a>
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./images/birthday-cake-birthday-svgrepo-com.svg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Cake</h5>
-          <p class="card-text">Testy and delicious cake.</p>
-          <a href="#" class="btn btn-primary">Buy</a>
-        </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+    <img  src="./images/birthday-cake-birthday-svgrepo-com.svg" class="img" >
+      <div class="card-body">
+        <h5 class="card-title">Birthday Cake-4</h5>
+        <p class="card-text">Cake is a delightful and indulgent dessert that comes in various flavors, textures, and styles.</p>
+        <a href="#" class="btn btn-primary">Buy</a>
       </div>
-`
-    } else if (page === 'pricing') {
-        contentDiv.innerHTML = `<div class="pricing-card">
+    </div>
+  </div>
+</div>
+    `;
+    }
+    else if (page === 'pricing') {
+        contentDiv.innerHTML = `
+        <div class="pricing">
+        
+        <div class="pricing-card">
         <div class="card-inner">
             <div class="card-front">
                 <h2>Basic Plan</h2>
@@ -49,10 +84,14 @@ function changeContent(page) {
                 <a href="#" class="btn btn-secondary">Subscribe</a>
             </div>
         </div>
+    </div>
+
     </div>`;
     }
     else if (page === 'contact') {
-        contentDiv.innerHTML = `<form>
+        contentDiv.innerHTML = `
+      <div class="form">
+        <form>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -67,6 +106,7 @@ function changeContent(page) {
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-      </form>`;
+      </form>
+      </div>`;
     }
 }
